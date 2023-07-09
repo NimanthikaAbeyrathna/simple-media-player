@@ -21,6 +21,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import org.apache.commons.io.FilenameUtils;
 
@@ -38,6 +39,7 @@ public class AppInitializer extends Application {
         mainScene(primaryStage);
         primaryStage.setTitle("Media Player");
         primaryStage.centerOnScreen();
+        primaryStage.setResizable(false);
         primaryStage.show();
 
     }
@@ -203,7 +205,7 @@ public class AppInitializer extends Application {
         hBox3.setSpacing(5);
         hBox3.setPadding(new Insets(20));
 
-        Image imgBackground = new Image("https://www.teahub.io/photos/full/105-1054627_musical-background.jpg");
+        Image imgBackground = new Image("/img/background.jpg");
         BackgroundImage bImg = new BackgroundImage(imgBackground,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
